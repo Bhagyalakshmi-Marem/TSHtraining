@@ -1,0 +1,490 @@
+Microsoft Windows [Version 10.0.18362.1082]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\ASUS>C:\Qualcomm\Hexagon_SDK\3.5.2>setup_sdk_env.cmd
+'C:\Qualcomm\Hexagon_SDK\3.5.2' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\ASUS>C:\Qualcomm\Hexagon_SDK\3.5.2\setup_sdk_env.cmd
+Setting up the Hexagon SDK environment locally...
+
+Checking if all the SDK dependencies are available...
+
+Setup Done
+
+C:\Users\ASUS>cd C:\Qualcomm\Hexagon_SDK\3.5.2
+
+C:\Qualcomm\Hexagon_SDK\3.5.2>cd examples\common\calculator
+
+C:\Qualcomm\Hexagon_SDK\3.5.2\examples\common\calculator>python calculator_walkthrough.py -T sdm845 -D cdsp
+List of devices attached
+82c64f19        device
+
+
+[u'List of devices attached', u'82c64f19\tdevice', u'', u'']
+adb -s 82c64f19 wait-for-device root
+adbd is already running as root
+/firmware/verinfo/Ver_Info.txt
+returned device_number is82c64f19
+[u'List of devices attached', u'82c64f19\tdevice', u'', u'']
+adb -s 82c64f19 wait-for-device root
+adbd is already running as root
+/firmware/verinfo/Ver_Info.txt
+---- Build calculator example for both Android and Hexagon ----
+make -C C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator tree_clean V=android_Debug_aarch64 CDSP_FLAG=1 VERBOSE=1 || exit /b
+make: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+C:\Qualcomm\Hexagon_SDK\3.5.2/build/make.d.ext/android/defines_android_Debug_aarch64.min:32: "Using default tools location: ANDROID_TOOLS_DIR=C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64"
+C:\Qualcomm\Hexagon_SDK\3.5.2/build/make.d.ext/android/defines_android_Debug_aarch64.min:41: "Using default platform location: ANDROID_PLATFORM_DIR=C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64"
+************  LIB=libcdsprpc ************
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making .
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+(if exist android_Debug_aarch64 rmdir/s/q android_Debug_aarch64) &&  cmd /c exit 0
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rpcmem
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[3]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[3]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making .
+make[3]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+(if exist android_Debug_aarch64 rmdir/s/q android_Debug_aarch64) &&  cmd /c exit 0
+make[3]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_util
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[3]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[3]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making .
+make[3]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+(if exist android_Debug_aarch64 rmdir/s/q android_Debug_aarch64) &&  cmd /c exit 0
+make[3]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+making .
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+(if exist android_Debug_aarch64 rmdir/s/q android_Debug_aarch64) &&  cmd /c exit 0
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+making .
+************  LIB=libcdsprpc ************
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+(if exist android_Debug_aarch64 rmdir/s/q android_Debug_aarch64) &&  cmd /c exit 0
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+make: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+make -C C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator tree V=android_Debug_aarch64 CDSP_FLAG=1 VERBOSE=1 || exit /b
+make: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+C:\Qualcomm\Hexagon_SDK\3.5.2/build/make.d.ext/android/defines_android_Debug_aarch64.min:32: "Using default tools location: ANDROID_TOOLS_DIR=C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64"
+C:\Qualcomm\Hexagon_SDK\3.5.2/build/make.d.ext/android/defines_android_Debug_aarch64.min:41: "Using default platform location: ANDROID_PLATFORM_DIR=C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64"
+************  LIB=libcdsprpc ************
+making C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+Qaic's Another IDL Compiler: version 1.0.40.
+Copyright (c) 2012 QUALCOMM Inc. All rights reserved.
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[2]: `bin/qaic.exe' is up to date.
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making .
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android26-clang" -target aarch64-linux-android26  -c -fpie -fpic -fPIE -fPIC -Wall -Wno-missing-braces -fpic -g -isystem C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/include -D_ANDROID_ -DANDROID -std=gnu99           -D__FILENAME__=\"atomic.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/android_Debug_aarch64 -Iinc -Iandroid_Debug_aarch64  -oandroid_Debug_aarch64/atomic.o src/atomic.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android26-clang" -target aarch64-linux-android26  -c -fpie -fpic -fPIE -fPIC -Wall -Wno-missing-braces -fpic -g -isystem C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/include -D_ANDROID_ -DANDROID -std=gnu99           -D__FILENAME__=\"cae.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/android_Debug_aarch64 -Iinc -Iandroid_Debug_aarch64  -oandroid_Debug_aarch64/cae.o src/cae.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar"  @android_Debug_aarch64/atomic_a_archiver.txt
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android26-clang" -target aarch64-linux-android26  -c -fpie -fpic -fPIE -fPIC -Wall -Wno-missing-braces -fpic -g -isystem C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/include -D_ANDROID_ -DANDROID -std=gnu99           -D__FILENAME__=\"atomic_q.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/android_Debug_aarch64 -Iinc -Iandroid_Debug_aarch64  -oandroid_Debug_aarch64/atomic_q.o src/atomic_q.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android26-clang++" -target aarch64-linux-android26 @android_Debug_aarch64/atomic_q_link.txt
+echo ok android_Debug_aarch64/atomic_q
+ok android_Debug_aarch64/atomic_q
+(if exist android_Debug_aarch64\atomic_q.ok (copy /b /v android_Debug_aarch64\atomic_q.ok +,,android_Debug_aarch64\atomic_q.ok>nul) else (echo on>android_Debug_aarch64\atomic_q.ok)) &&  cmd /c exit 0
+(if exist android_Debug_aarch64\atomic.a\? (echo D | xcopy /i/s/c/y/k/r/q android_Debug_aarch64\atomic.a C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\atomic\android_Debug_aarch64\ship\atomic.a) else (echo F | xcopy /c/y/k/r/q android_Debug_aarch64\atomic.a C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\atomic\android_Debug_aarch64\ship\atomic.a)>nul) &&  cmd /c exit 0
+(if exist inc\AEEatomic.h\? (echo D | xcopy /i/s/c/y/k/r/q inc\AEEatomic.h C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\atomic\android_Debug_aarch64\ship\AEEatomic.h) else (echo F | xcopy /c/y/k/r/q inc\AEEatomic.h C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\atomic\android_Debug_aarch64\ship\AEEatomic.h)>nul) &&  cmd /c exit 0
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rpcmem
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[2]: `bin/qaic.exe' is up to date.
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[3]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[3]: `bin/qaic.exe' is up to date.
+make[3]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making .
+make[3]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_util
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[3]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[3]: `bin/qaic.exe' is up to date.
+make[3]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making .
+make[3]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android26-clang" -target aarch64-linux-android26  -c -fpie -fpic -fPIE -fPIC -Wall -Wno-missing-braces -fpic -g -isystem C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/include -D_ANDROID_ -DANDROID -std=gnu99           -D__FILENAME__=\"test_utils.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/android_Debug_aarch64 -Iinc -Isrc -Iandroid_Debug_aarch64  -oandroid_Debug_aarch64/test_utils.o src/test_utils.c
+src/test_utils.c:64:9: warning: cast to 'void *' from smaller integer type 'int' [-Wint-to-void-pointer-cast]
+        return (void *)fd;
+               ^
+1 warning generated.
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar"  @android_Debug_aarch64/test_util_a_archiver.txt
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android26-clang" -target aarch64-linux-android26  -c -fpie -fpic -fPIE -fPIC -Wall -Wno-missing-braces -fpic -g -isystem C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/include -D_ANDROID_ -DANDROID -std=gnu99           -D__FILENAME__=\"HAP_debug_printf.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/android_Debug_aarch64 -Iinc -Isrc -Iandroid_Debug_aarch64  -oandroid_Debug_aarch64/HAP_debug_printf.o src/HAP_debug_printf.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar"  @android_Debug_aarch64/HAP_debug_printf_a_archiver.txt
+(if exist android_Debug_aarch64\test_util.a\? (echo D | xcopy /i/s/c/y/k/r/q android_Debug_aarch64\test_util.a C:\Qualcomm\Hexagon_SDK\3.5.2\test\common\test_util\android_Debug_aarch64\ship\test_util.a) else (echo F | xcopy /c/y/k/r/q android_Debug_aarch64\test_util.a C:\Qualcomm\Hexagon_SDK\3.5.2\test\common\test_util\android_Debug_aarch64\ship\test_util.a)>nul) &&  cmd /c exit 0
+(if exist android_Debug_aarch64\HAP_debug_printf.a\? (echo D | xcopy /i/s/c/y/k/r/q android_Debug_aarch64\HAP_debug_printf.a C:\Qualcomm\Hexagon_SDK\3.5.2\test\common\test_util\android_Debug_aarch64\ship\HAP_debug_printf.a) else (echo F | xcopy /c/y/k/r/q android_Debug_aarch64\HAP_debug_printf.a C:\Qualcomm\Hexagon_SDK\3.5.2\test\common\test_util\android_Debug_aarch64\ship\HAP_debug_printf.a)>nul) &&  cmd /c exit 0
+make[3]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+making .
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android26-clang" -target aarch64-linux-android26  -c -fpie -fpic -fPIE -fPIC -Wall -Wno-missing-braces -fpic -g -isystem C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/include -D_ANDROID_ -DANDROID -std=gnu99           -D__FILENAME__=\"rpcmem_android.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic/android_Debug_aarch64/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_util/android_Debug_aarch64/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qlist -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/a1std -Iinc -Isrc -Iandroid_Debug_aarch64  -oandroid_Debug_aarch64/rpcmem_android.o src/rpcmem_android.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar"  @android_Debug_aarch64/rpcmem_a_archiver.txt
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android26-clang" -target aarch64-linux-android26  -c -fpie -fpic -fPIE -fPIC -Wall -Wno-missing-braces -fpic -g -isystem C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/include -D_ANDROID_ -DANDROID -std=gnu99           -D__FILENAME__=\"rpcmem_android_q.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic/android_Debug_aarch64/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_util/android_Debug_aarch64/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qlist -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/a1std -Iinc -Isrc -Iandroid_Debug_aarch64  -oandroid_Debug_aarch64/rpcmem_android_q.o src/rpcmem_android_q.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android26-clang++" -target aarch64-linux-android26 @android_Debug_aarch64/rpcmem_q_link.txt
+echo ok android_Debug_aarch64/rpcmem_q
+ok android_Debug_aarch64/rpcmem_q
+(if exist android_Debug_aarch64\rpcmem_q.ok (copy /b /v android_Debug_aarch64\rpcmem_q.ok +,,android_Debug_aarch64\rpcmem_q.ok>nul) else (echo on>android_Debug_aarch64\rpcmem_q.ok)) &&  cmd /c exit 0
+(if exist inc\rpcmem.h\? (echo D | xcopy /i/s/c/y/k/r/q inc\rpcmem.h C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\rpcmem\android_Debug_aarch64\ship\rpcmem.h) else (echo F | xcopy /c/y/k/r/q inc\rpcmem.h C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\rpcmem\android_Debug_aarch64\ship\rpcmem.h)>nul) &&  cmd /c exit 0
+(if exist android_Debug_aarch64\rpcmem.a\? (echo D | xcopy /i/s/c/y/k/r/q android_Debug_aarch64\rpcmem.a C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\rpcmem\android_Debug_aarch64\ship\rpcmem.a) else (echo F | xcopy /c/y/k/r/q android_Debug_aarch64\rpcmem.a C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\rpcmem\android_Debug_aarch64\ship\rpcmem.a)>nul) &&  cmd /c exit 0
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+making .
+************  LIB=libcdsprpc ************
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+"C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic/bin/qaic.exe"    -mdll -o android_Debug_aarch64 -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic/android_Debug_aarch64/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rpcmem/android_Debug_aarch64/ship -Iandroid_Debug_aarch64 inc/calculator.idl
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android26-clang" -target aarch64-linux-android26  -c -fpie -fpic -fPIE -fPIC -Wall -Wno-missing-braces -fpic -g -isystem C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/include -D_ANDROID_ -DANDROID -std=gnu99           -D__FILENAME__=\"calculator_stub.c\" -DCDSP -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic/android_Debug_aarch64/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rpcmem/android_Debug_aarch64/ship -Iandroid_Debug_aarch64  -oandroid_Debug_aarch64/calculator_stub.o android_Debug_aarch64/calculator_stub.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android26-clang++" -target aarch64-linux-android26 @android_Debug_aarch64/libcalculator_so_link.txt
+(if exist C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\remote\ship\android_Debug_aarch64\libcdsprpc.so\? (echo D | xcopy /i/s/c/y/k/r/q C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\remote\ship\android_Debug_aarch64\libcdsprpc.so android_Debug_aarch64\libcdsprpc.so) else (echo F | xcopy /c/y/k/r/q C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\remote\ship\android_Debug_aarch64\libcdsprpc.so android_Debug_aarch64\libcdsprpc.so)>nul) &&  cmd /c exit 0
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android26-clang" -target aarch64-linux-android26  -c -fpie -fpic -fPIE -fPIC -Wall -Wno-missing-braces -fpic -g -isystem C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/include -D_ANDROID_ -DANDROID -std=gnu99           -D__FILENAME__=\"calculator_main.c\" -DCDSP -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic/android_Debug_aarch64/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rpcmem/android_Debug_aarch64/ship -Iandroid_Debug_aarch64  -oandroid_Debug_aarch64/calculator_main.o src/calculator_main.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android26-clang" -target aarch64-linux-android26  -c -fpie -fpic -fPIE -fPIC -Wall -Wno-missing-braces -fpic -g -isystem C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/include -D_ANDROID_ -DANDROID -std=gnu99           -D__FILENAME__=\"calculator_test.c\" -DCDSP -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/android_Debug_aarch64 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic/android_Debug_aarch64/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rpcmem/android_Debug_aarch64/ship -Iandroid_Debug_aarch64  -oandroid_Debug_aarch64/calculator_test.o src/calculator_test.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android26-clang++" -target aarch64-linux-android26 @android_Debug_aarch64/calculator_link.txt
+(if exist android_Debug_aarch64\libcalculator.so\? (echo D | xcopy /i/s/c/y/k/r/q android_Debug_aarch64\libcalculator.so C:\Qualcomm\Hexagon_SDK\3.5.2\examples\common\calculator\android_Debug_aarch64\ship\libcalculator.so) else (echo F | xcopy /c/y/k/r/q android_Debug_aarch64\libcalculator.so C:\Qualcomm\Hexagon_SDK\3.5.2\examples\common\calculator\android_Debug_aarch64\ship\libcalculator.so)>nul) &&  cmd /c exit 0
+(if exist android_Debug_aarch64\calculator\? (echo D | xcopy /i/s/c/y/k/r/q android_Debug_aarch64\calculator C:\Qualcomm\Hexagon_SDK\3.5.2\examples\common\calculator\android_Debug_aarch64\ship\calculator) else (echo F | xcopy /c/y/k/r/q android_Debug_aarch64\calculator C:\Qualcomm\Hexagon_SDK\3.5.2\examples\common\calculator\android_Debug_aarch64\ship\calculator)>nul) &&  cmd /c exit 0
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+make: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+make -C C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator tree_clean V=hexagon_Debug_dynamic_toolv83_v65 VERBOSE=1 || exit /b
+make: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making .
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+(if exist hexagon_Debug_dynamic_toolv83_v65 rmdir/s/q hexagon_Debug_dynamic_toolv83_v65) &&  cmd /c exit 0
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rpcmem
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making .
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+(if exist hexagon_Debug_dynamic_toolv83_v65 rmdir/s/q hexagon_Debug_dynamic_toolv83_v65) &&  cmd /c exit 0
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_main
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_main'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making .
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_main'
+(if exist hexagon_Debug_dynamic_toolv83_v65 rmdir/s/q hexagon_Debug_dynamic_toolv83_v65) &&  cmd /c exit 0
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_main'
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_main'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_util
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+cleaning C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making .
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+(if exist hexagon_Debug_dynamic_toolv83_v65 rmdir/s/q hexagon_Debug_dynamic_toolv83_v65) &&  cmd /c exit 0
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+making .
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+(if exist hexagon_Debug_dynamic_toolv83_v65 rmdir/s/q hexagon_Debug_dynamic_toolv83_v65) &&  cmd /c exit 0
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+make: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+make -C C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator tree V=hexagon_Debug_dynamic_toolv83_v65 VERBOSE=1 || exit /b
+make: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+Qaic's Another IDL Compiler: version 1.0.40.
+Copyright (c) 2012 QUALCOMM Inc. All rights reserved.
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[2]: `bin/qaic.exe' is up to date.
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making .
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+"mkdir" -p hexagon_Debug_dynamic_toolv83_v65
+"mkdir" -p hexagon_Debug_dynamic_toolv83_v65
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"atomic.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -Iinc -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/atomic.o src/atomic.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"cae.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -Iinc -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/cae.o src/cae.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-ar"  @hexagon_Debug_dynamic_toolv83_v65/atomic_a_archiver.txt
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"atomic_q.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -Iinc -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/atomic_q.o src/atomic_q.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"  @hexagon_Debug_dynamic_toolv83_v65/atomic_q_link.txt
+Target: hexagon
+Thread model: posix
+QuIC LLVM Hexagon Clang version 8.3.07 (based on LLVM 7.0.0)
+InstalledDir: C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin
+ "C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin\\hexagon-link.exe" --hash-style=sysv -march=hexagon -mcpu=hexagonv65 -G0 -o hexagon_Debug_dynamic_toolv83_v65/atomic_q C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/crt0_standalone.o C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/crt0.o C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/init.o -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0 -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65 -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib --no-threads --dynamic-linker= -E --force-dynamic -u main --start-group hexagon_Debug_dynamic_toolv83_v65/atomic_q.o hexagon_Debug_dynamic_toolv83_v65/atomic.a C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/target/hexagon/lib/v65/G0/libhexagon.a --end-group --start-group -lstandalone -lc -lgcc --end-group C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/fini.o
+echo ok hexagon_Debug_dynamic_toolv83_v65/atomic_q
+ok hexagon_Debug_dynamic_toolv83_v65/atomic_q
+C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-sim -mv65 --simulated_returnval --usefs hexagon_Debug_dynamic_toolv83_v65 --pmu_statsfile hexagon_Debug_dynamic_toolv83_v65/pmu_stats.txt --l2tcm_base 0xd800  hexagon_Debug_dynamic_toolv83_v65/atomic_q --
+hexagon-sim INFO: The rev_id used in the simulation is 0x00004065 (v65a_512)
+
+Done!
+        T0: Insns=3989 Packets=2716
+        T1: Insns=0 Packets=0
+        T2: Insns=0 Packets=0
+        T3: Insns=0 Packets=0
+        Total: Insns=3989 Pcycles=5434
+(if exist hexagon_Debug_dynamic_toolv83_v65\atomic_q.ok (copy /b /v hexagon_Debug_dynamic_toolv83_v65\atomic_q.ok +,,hexagon_Debug_dynamic_toolv83_v65\atomic_q.ok>nul) else (echo on>hexagon_Debug_dynamic_toolv83_v65\atomic_q.ok)) &&  cmd /c exit 0
+(if exist hexagon_Debug_dynamic_toolv83_v65\atomic.a\? (echo D | xcopy /i/s/c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\atomic.a C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\atomic\hexagon_Debug_dynamic_toolv83_v65\ship\atomic.a) else (echo F | xcopy /c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\atomic.a C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\atomic\hexagon_Debug_dynamic_toolv83_v65\ship\atomic.a)>nul) &&  cmd /c exit 0
+(if exist inc\AEEatomic.h\? (echo D | xcopy /i/s/c/y/k/r/q inc\AEEatomic.h C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\atomic\hexagon_Debug_dynamic_toolv83_v65\ship\AEEatomic.h) else (echo F | xcopy /c/y/k/r/q inc\AEEatomic.h C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\atomic\hexagon_Debug_dynamic_toolv83_v65\ship\AEEatomic.h)>nul) &&  cmd /c exit 0
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rpcmem
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[2]: `bin/qaic.exe' is up to date.
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making .
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+"mkdir" -p hexagon_Debug_dynamic_toolv83_v65
+"mkdir" -p hexagon_Debug_dynamic_toolv83_v65
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"rpcmem_stub.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -Iinc -Isrc -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/rpcmem_stub.o src/rpcmem_stub.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-ar"  @hexagon_Debug_dynamic_toolv83_v65/rpcmem_a_archiver.txt
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"  @hexagon_Debug_dynamic_toolv83_v65/rpcmem_so_link.txt
+Target: hexagon
+Thread model: posix
+QuIC LLVM Hexagon Clang version 8.3.07 (based on LLVM 7.0.0)
+InstalledDir: C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin
+ "C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin\\hexagon-link.exe" --hash-style=sysv -march=hexagon -mcpu=hexagonv65 -shared -call_shared -G0 -o hexagon_Debug_dynamic_toolv83_v65/rpcmem.so C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/initS.o -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0 -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65 -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib --no-threads -Bsymbolic --wrap=malloc --wrap=calloc --wrap=free --wrap=realloc --wrap=memalign --wrap=__stack_chk_fail -lc -Map=hexagon_Debug_dynamic_toolv83_v65/rpcmem.so.map -soname=rpcmem.so --start-group hexagon_Debug_dynamic_toolv83_v65/rpcmem_stub.o --end-group --start-group -lgcc --end-group C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/finiS.o
+(if exist inc\rpcmem.h\? (echo D | xcopy /i/s/c/y/k/r/q inc\rpcmem.h C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\rpcmem\hexagon_Debug_dynamic_toolv83_v65\ship\rpcmem.h) else (echo F | xcopy /c/y/k/r/q inc\rpcmem.h C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\rpcmem\hexagon_Debug_dynamic_toolv83_v65\ship\rpcmem.h)>nul) &&  cmd /c exit 0
+(if exist hexagon_Debug_dynamic_toolv83_v65\rpcmem.a\? (echo D | xcopy /i/s/c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\rpcmem.a C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\rpcmem\hexagon_Debug_dynamic_toolv83_v65\ship\rpcmem.a) else (echo F | xcopy /c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\rpcmem.a C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\rpcmem\hexagon_Debug_dynamic_toolv83_v65\ship\rpcmem.a)>nul) &&  cmd /c exit 0
+(if exist hexagon_Debug_dynamic_toolv83_v65\rpcmem.so\? (echo D | xcopy /i/s/c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\rpcmem.so C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\rpcmem\hexagon_Debug_dynamic_toolv83_v65\ship\rpcmem.so) else (echo F | xcopy /c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\rpcmem.so C:\Qualcomm\Hexagon_SDK\3.5.2\libs\common\rpcmem\hexagon_Debug_dynamic_toolv83_v65\ship\rpcmem.so)>nul) &&  cmd /c exit 0
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_main
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_main'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[2]: `bin/qaic.exe' is up to date.
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making .
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_main'
+"mkdir" -p hexagon_Debug_dynamic_toolv83_v65
+"mkdir" -p hexagon_Debug_dynamic_toolv83_v65
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"test_main.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -Iinc -Isrc -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/test_main.o src/test_main.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-ar"  @hexagon_Debug_dynamic_toolv83_v65/test_main_a_archiver.txt
+(if exist inc\test_main.h\? (echo D | xcopy /i/s/c/y/k/r/q inc\test_main.h C:\Qualcomm\Hexagon_SDK\3.5.2\test\common\test_main\hexagon_Debug_dynamic_toolv83_v65\ship\test_main.h) else (echo F | xcopy /c/y/k/r/q inc\test_main.h C:\Qualcomm\Hexagon_SDK\3.5.2\test\common\test_main\hexagon_Debug_dynamic_toolv83_v65\ship\test_main.h)>nul) &&  cmd /c exit 0
+(if exist hexagon_Debug_dynamic_toolv83_v65\test_main.a\? (echo D | xcopy /i/s/c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\test_main.a C:\Qualcomm\Hexagon_SDK\3.5.2\test\common\test_main\hexagon_Debug_dynamic_toolv83_v65\ship\test_main.a) else (echo F | xcopy /c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\test_main.a C:\Qualcomm\Hexagon_SDK\3.5.2\test\common\test_main\hexagon_Debug_dynamic_toolv83_v65\ship\test_main.a)>nul) &&  cmd /c exit 0
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_main'
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_main'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_util
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+making C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+make[2]: `bin/qaic.exe' is up to date.
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/tools/qaic'
+making .
+make[2]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+"mkdir" -p hexagon_Debug_dynamic_toolv83_v65
+"mkdir" -p hexagon_Debug_dynamic_toolv83_v65
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"test_utils.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include/qurt -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include/posix -Iinc -Isrc -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/test_utils.o src/test_utils.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"sysmon_vtcm_mgr_client.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include/qurt -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include/posix -Iinc -Isrc -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/sysmon_vtcm_mgr_client.o src/sysmon_vtcm_mgr_client.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"sysmon_vtcm_mgr_srv.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include/qurt -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include/posix -Iinc -Isrc -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/sysmon_vtcm_mgr_srv.o src/sysmon_vtcm_mgr_srv.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"sysmon_cachelock_srv.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include/qurt -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include/posix -Iinc -Isrc -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/sysmon_cachelock_srv.o src/sysmon_cachelock_srv.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"sysmon_cachelock_client.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include/qurt -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include/posix -Iinc -Isrc -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/sysmon_cachelock_client.o src/sysmon_cachelock_client.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-ar"  @hexagon_Debug_dynamic_toolv83_v65/test_util_a_archiver.txt
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"HAP_debug_printf.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include/qurt -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qurt//computev65/include/posix -Iinc -Isrc -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/HAP_debug_printf.o src/HAP_debug_printf.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-ar"  @hexagon_Debug_dynamic_toolv83_v65/HAP_debug_printf_a_archiver.txt
+(if exist hexagon_Debug_dynamic_toolv83_v65\test_util.a\? (echo D | xcopy /i/s/c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\test_util.a C:\Qualcomm\Hexagon_SDK\3.5.2\test\common\test_util\hexagon_Debug_dynamic_toolv83_v65\ship\test_util.a) else (echo F | xcopy /c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\test_util.a C:\Qualcomm\Hexagon_SDK\3.5.2\test\common\test_util\hexagon_Debug_dynamic_toolv83_v65\ship\test_util.a)>nul) &&  cmd /c exit 0
+(if exist hexagon_Debug_dynamic_toolv83_v65\HAP_debug_printf.a\? (echo D | xcopy /i/s/c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\HAP_debug_printf.a C:\Qualcomm\Hexagon_SDK\3.5.2\test\common\test_util\hexagon_Debug_dynamic_toolv83_v65\ship\HAP_debug_printf.a) else (echo F | xcopy /c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\HAP_debug_printf.a C:\Qualcomm\Hexagon_SDK\3.5.2\test\common\test_util\hexagon_Debug_dynamic_toolv83_v65\ship\HAP_debug_printf.a)>nul) &&  cmd /c exit 0
+make[2]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util'
+making .
+make[1]: Entering directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+"mkdir" -p hexagon_Debug_dynamic_toolv83_v65
+"mkdir" -p hexagon_Debug_dynamic_toolv83_v65
+"C:\Qualcomm\Hexagon_SDK\3.5.2/tools/qaic/bin/qaic.exe"    -mdll -o hexagon_Debug_dynamic_toolv83_v65 -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rpcmem/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_main/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_util/hexagon_Debug_dynamic_toolv83_v65/ship -Ihexagon_Debug_dynamic_toolv83_v65 inc/calculator.idl
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"calculator_skel.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rpcmem/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_main/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_util/hexagon_Debug_dynamic_toolv83_v65/ship -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/calculator_skel.o hexagon_Debug_dynamic_toolv83_v65/calculator_skel.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"calculator_imp.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rpcmem/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_main/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_util/hexagon_Debug_dynamic_toolv83_v65/ship -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/calculator_imp.o src/calculator_imp.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-ar"  @hexagon_Debug_dynamic_toolv83_v65/libcalculator_skel_a_archiver.txt
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"  @hexagon_Debug_dynamic_toolv83_v65/libcalculator_skel_so_link.txt
+Target: hexagon
+Thread model: posix
+QuIC LLVM Hexagon Clang version 8.3.07 (based on LLVM 7.0.0)
+InstalledDir: C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin
+ "C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin\\hexagon-link.exe" --hash-style=sysv -march=hexagon -mcpu=hexagonv65 -shared -call_shared -G0 -o hexagon_Debug_dynamic_toolv83_v65/libcalculator_skel.so C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/initS.o -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0 -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65 -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib --no-threads -Bsymbolic --wrap=malloc --wrap=calloc --wrap=free --wrap=realloc --wrap=memalign --wrap=__stack_chk_fail -lc -Map=hexagon_Debug_dynamic_toolv83_v65/libcalculator_skel.so.map -soname=libcalculator_skel.so --start-group hexagon_Debug_dynamic_toolv83_v65/calculator_skel.o hexagon_Debug_dynamic_toolv83_v65/calculator_imp.o --end-group --start-group -lgcc --end-group C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/finiS.o
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"calculator_test_main.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rpcmem/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_main/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_util/hexagon_Debug_dynamic_toolv83_v65/ship -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/calculator_test_main.o src/calculator_test_main.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"   -mv65 -c -G0 -g -O0  -Wall -Werror -Wno-cast-align -Wpointer-arith -Wno-missing-braces -Wno-strict-aliasing -fno-exceptions -fno-strict-aliasing -fno-zero-initialized-in-bss -fdata-sections -fpic -D__V_DYNAMIC__ -Wstrict-prototypes -Wnested-externs           -D__FILENAME__=\"calculator_test.c\" -D_DEBUG  -I= -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/stddef -IC:\Qualcomm\Hexagon_SDK\3.5.2/incs/qnx -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/remote/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/qnx/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/apps_mem_heap/ship/hexagon_Debug_dynamic_toolv83_v65 -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/atomic/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/libs/common/rpcmem/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_main/hexagon_Debug_dynamic_toolv83_v65/ship -IC:\Qualcomm\Hexagon_SDK\3.5.2/test/common/test_util/hexagon_Debug_dynamic_toolv83_v65/ship -Ihexagon_Debug_dynamic_toolv83_v65  -o hexagon_Debug_dynamic_toolv83_v65/calculator_test.o src/calculator_test.c
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-clang"  @hexagon_Debug_dynamic_toolv83_v65/calculator_q_link.txt
+Target: hexagon
+Thread model: posix
+QuIC LLVM Hexagon Clang version 8.3.07 (based on LLVM 7.0.0)
+InstalledDir: C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin
+ "C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin\\hexagon-link.exe" --hash-style=sysv -march=hexagon -mcpu=hexagonv65 -G0 -o hexagon_Debug_dynamic_toolv83_v65/calculator_q C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/crt0_standalone.o C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/crt0.o C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/init.o -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0 -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65 -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib --no-threads --dynamic-linker= -E --force-dynamic -u main --start-group hexagon_Debug_dynamic_toolv83_v65/calculator_test_main.o hexagon_Debug_dynamic_toolv83_v65/calculator_test.o hexagon_Debug_dynamic_toolv83_v65/calculator_imp.o C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65/rtld.a C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem/hexagon_Debug_dynamic_toolv83_v65/ship/rpcmem.a C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util/hexagon_Debug_dynamic_toolv83_v65/ship/test_util.a C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic/hexagon_Debug_dynamic_toolv83_v65/ship/atomic.a C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/target/hexagon/lib/v65/G0/libhexagon.a --end-group --start-group -lstandalone -lc -lgcc --end-group C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/fini.o
+echo ok hexagon_Debug_dynamic_toolv83_v65/calculator_q
+ok hexagon_Debug_dynamic_toolv83_v65/calculator_q
+C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-sim -mv65 --simulated_returnval --usefs hexagon_Debug_dynamic_toolv83_v65 --pmu_statsfile hexagon_Debug_dynamic_toolv83_v65/pmu_stats.txt --l2tcm_base 0xd800  hexagon_Debug_dynamic_toolv83_v65/calculator_q --
+hexagon-sim INFO: The rev_id used in the simulation is 0x00004065 (v65a_512)
+
+---Allocate 1024 bytes from ION heap
+---Creating sequence of numbers from 0 to 255
+
+---Compute sum locally
+---Sum = 32640
+
+---Allocate 1024 bytes from ION heap
+---Creating sequence of numbers from 0 to 255
+
+---Compute sum on the DSP
+---Sum = 32640
+############################################################
+Summary Report
+############################################################
+Pass: 2
+Undetermined: 0
+Fail: 0
+Did not run: 0
+
+Done!
+        T0: Insns=144528 Packets=75622
+        T1: Insns=0 Packets=0
+        T2: Insns=0 Packets=0
+        T3: Insns=0 Packets=0
+        Total: Insns=144528 Pcycles=151246
+(if exist hexagon_Debug_dynamic_toolv83_v65\calculator_q.ok (copy /b /v hexagon_Debug_dynamic_toolv83_v65\calculator_q.ok +,,hexagon_Debug_dynamic_toolv83_v65\calculator_q.ok>nul) else (echo on>hexagon_Debug_dynamic_toolv83_v65\calculator_q.ok)) &&  cmd /c exit 0
+(if exist hexagon_Debug_dynamic_toolv83_v65\libcalculator_skel.so\? (echo D | xcopy /i/s/c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\libcalculator_skel.so C:\Qualcomm\Hexagon_SDK\3.5.2\examples\common\calculator\hexagon_Debug_dynamic_toolv83_v65\ship\libcalculator_skel.so) else (echo F | xcopy /c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\libcalculator_skel.so C:\Qualcomm\Hexagon_SDK\3.5.2\examples\common\calculator\hexagon_Debug_dynamic_toolv83_v65\ship\libcalculator_skel.so)>nul) &&  cmd /c exit 0
+(if exist hexagon_Debug_dynamic_toolv83_v65\libcalculator_skel.a\? (echo D | xcopy /i/s/c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\libcalculator_skel.a C:\Qualcomm\Hexagon_SDK\3.5.2\examples\common\calculator\hexagon_Debug_dynamic_toolv83_v65\ship\libcalculator_skel.a) else (echo F | xcopy /c/y/k/r/q hexagon_Debug_dynamic_toolv83_v65\libcalculator_skel.a C:\Qualcomm\Hexagon_SDK\3.5.2\examples\common\calculator\hexagon_Debug_dynamic_toolv83_v65\ship\libcalculator_skel.a)>nul) &&  cmd /c exit 0
+make[1]: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+make: Leaving directory `C:/Qualcomm/Hexagon_SDK/3.5.2/examples/common/calculator'
+adb -s 82c64f19  logcat -c
+List of devices attached
+82c64f19        device
+
+
+List of devices attached
+82c64f19        device
+
+
+adb -s 82c64f19 wait-for-device root
+adbd is already running as root
+/firmware/verinfo/Ver_Info.txt
+
+---- root/remount device ----
+adb -s 82c64f19 wait-for-device root
+adbd is already running as root
+checking disable-verity...
+verity is already disabled
+adb -s 82c64f19 wait-for-device remount
+remount succeeded
+
+--- Read serial number from device ---
+
+--- Generate testsig ---
+python C:\Qualcomm\Hexagon_SDK\3.5.2/tools/elfsigner/elfsigner.py -t 0xa7f88a2f -o C:\Qualcomm\Hexagon_SDK\3.5.2/tools/elfsigner/testsigs
+Logging to C:\Qualcomm\Hexagon_SDK\3.5.2\tools\elfsigner\testsigs\Elfsigner_log.txt
+
+        Attention:
+        Use of this tool is conditioned upon your compliance with Qualcomm
+        Technologies'(and its affiliates') license terms and conditions;
+        including, without limitations, such terms and conditions addressing
+        the use of such tools with open source software.
+
+        Agree? [y/n]:
+        y
+Signing a file may take up to 3 minutes due to network connectivity. Please wait patiently.
+------------------------------------------------------------
+Signing complete! Output saved at C:\Qualcomm\Hexagon_SDK\3.5.2\tools\elfsigner\testsigs\testsig-0xa7f88a2f.so
+
+
+--- Testsig generated sucessfully ---
+
+--- Push Test Signature ---
+adb -s 82c64f19 wait-for-device shell mkdir -p /vendor/lib/rfsa/dsp/testsig
+adb -s 82c64f19 wait-for-device push C:\Qualcomm\Hexagon_SDK\3.5.2/tools/elfsigner/testsigs/testsig-0xa7f88a2f.so /vendor/lib/rfsa/dsp/testsig
+C:\Qualcomm\Hexagon_SDK\3.5.2/tools/elfsigner/testsigs/tes...1 file pushed, 0 skipped. 0.4 MB/s (24784 bytes in 0.057s)
+adb -s 82c64f19 wait-for-device reboot
+adb -s 82c64f19 wait-for-device
+Done
+---- root/remount device ----
+adb -s 82c64f19 wait-for-device root
+adb -s 82c64f19 wait-for-device remount
+remount succeeded
+---- Push Android components ----
+adb -s 82c64f19  wait-for-device shell mkdir -p /vendor/bin
+adb -s 82c64f19  wait-for-device push C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator/android_Debug_aarch64/ship/calculator /vendor/bin
+C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator/a...1 file pushed, 0 skipped. 2.0 MB/s (46192 bytes in 0.022s)
+adb -s 82c64f19  wait-for-device shell chmod 777 /vendor/bin/calculator
+adb -s 82c64f19  wait-for-device push C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator/android_Debug_aarch64/ship/libcalculator.so /vendor/lib64/
+C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator/a...1 file pushed, 0 skipped. 1.9 MB/s (15216 bytes in 0.007s)
+ ---- Push Hexagon Components ----
+adb -s 82c64f19  wait-for-device shell mkdir -p /vendor/lib/rfsa/dsp/sdk/
+adb -s 82c64f19  wait-for-device push C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator/hexagon_Debug_dynamic_toolv83_v65/ship/libcalculator_skel.so /vendor/lib/rfsa/dsp/sdk/
+C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator/h...1 file pushed, 0 skipped. 1.8 MB/s (15192 bytes in 0.008s)
+---- Direct dsp messages to logcat ---
+adb -s 82c64f19  wait-for-device shell "echo 0x1f > /vendor/lib/rfsa/dsp/sdk/calculator.farf"
+adb -s 82c64f19  wait-for-device
+---- Launch logcat window to see aDSP diagnostic messages
+start cmd.exe /c adb -s 82c64f19  logcat -s adsprpc
+sleep 2
+---- Run Calculator Example Locally on Android ----
+adb -s 82c64f19  wait-for-device shell export LD_LIBRARY_PATH="/vendor/lib64/;" /vendor/bin/calculator 1 1000
+
+---Starting calculator test
+
+---Allocate 4000 bytes from ION heap
+---Creating sequence of numbers from 0 to 999
+
+---Compute sum locally
+---Sum = 499500
+---Success
+
+---- Run Calculator Example on CDSP ----
+adb -s 82c64f19  wait-for-device shell export LD_LIBRARY_PATH=/vendor/lib64/:$LD_LIBRARY_PATH ADSP_LIBRARY_PATH="/vendor/lib/rfsa/dsp/sdk\;/vendor/lib/rfsa/dsp/testsig;" /vendor/bin/calculator 0 1000
+
+---Starting calculator test
+
+---Allocate 4000 bytes from ION heap
+---Creating sequence of numbers from 0 to 999
+
+---Compute sum on the DSP
+---Sum = 499500
+---Success
+
+Done
+
+C:\Qualcomm\Hexagon_SDK\3.5.2\examples\common\calculator>
+

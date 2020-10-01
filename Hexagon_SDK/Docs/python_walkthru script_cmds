@@ -1,0 +1,91 @@
+python calculator_walkthrough.py -T sdm845 -D cdsp
+
+What walkthru script does:
+
+1) Compile Application test app
+2) Compile Hexagon Side library and run in simulator
+3) Signing of the device
+4) Push the test app and libs into the device. into specific paths
+   App: vendor/bin/
+   Hexagon lib: /vendor/lib/rfsa/dsp/sdk/
+5) Run the application
+
+
+
+
+1) 
+make tree_clean V=android_Debug_aarch64 CDSP_FLAG=1 VERBOSE=1
+make tree V=android_Debug_aarch64 CDSP_FLAG=1 VERBOSE=1 
+
+2)
+make tree_clean V=hexagon_Debug_dynamic_toolv83_v65 VERBOSE=1
+make tree V=hexagon_Debug_dynamic_toolv83_v65 VERBOSE=1
+
+Simulator command:  
+"C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin\\hexagon-link.exe" --hash-style=sysv -march=hexagon -mcpu=hexagonv65 -G0 -o hexagon_Debug_dynamic_toolv83_v65/calculator_q C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/crt0_standalone.o C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/crt0.o C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/init.o -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0 -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65 -LC:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib --no-threads --dynamic-linker= -E --force-dynamic -u main --start-group hexagon_Debug_dynamic_toolv83_v65/calculator_test_main.o hexagon_Debug_dynamic_toolv83_v65/calculator_test.o hexagon_Debug_dynamic_toolv83_v65/calculator_imp.o C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rtld/ship/hexagon_Debug_dynamic_toolv83_v65/rtld.a C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem/hexagon_Debug_dynamic_toolv83_v65/ship/rpcmem.a C:/Qualcomm/Hexagon_SDK/3.5.2/test/common/test_util/hexagon_Debug_dynamic_toolv83_v65/ship/test_util.a C:/Qualcomm/Hexagon_SDK/3.5.2/libs/common/atomic/hexagon_Debug_dynamic_toolv83_v65/ship/atomic.a C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/target/hexagon/lib/v65/G0/libhexagon.a --end-group --start-group -lstandalone -lc -lgcc --end-group C:/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/fini.o
+echo ok hexagon_Debug_dynamic_toolv83_v65/calculator_q
+
+
+3) 
+
+--- Read serial number from device ---
+
+--- Generate testsig ---
+python C:\Qualcomm\Hexagon_SDK\3.5.2/tools/elfsigner/elfsigner.py -t 0xa7f88a2f -o C:\Qualcomm\Hexagon_SDK\3.5.2/tools/elfsigner/testsigs
+Logging to C:\Qualcomm\Hexagon_SDK\3.5.2\tools\elfsigner\testsigs\Elfsigner_log.txt
+
+        Attention:
+        Use of this tool is conditioned upon your compliance with Qualcomm
+        Technologies'(and its affiliates') license terms and conditions;
+        including, without limitations, such terms and conditions addressing
+        the use of such tools with open source software.
+
+        Agree? [y/n]:
+        y
+Signing a file may take up to 3 minutes due to network connectivity. Please wait patiently.
+------------------------------------------------------------
+Signing complete! Output saved at C:\Qualcomm\Hexagon_SDK\3.5.2\tools\elfsigner\testsigs\testsig-0xa7f88a2f.so
+
+
+--- Testsig generated sucessfully ---
+
+
+
+
+4) 
+
+
+--- Push Test Signature ---
+adb -s 82c64f19 wait-for-device shell mkdir -p /vendor/lib/rfsa/dsp/testsig
+adb -s 82c64f19 wait-for-device push C:\Qualcomm\Hexagon_SDK\3.5.2/tools/elfsigner/testsigs/testsig-0xa7f88a2f.so /vendor/lib/rfsa/dsp/testsig
+C:\Qualcomm\Hexagon_SDK\3.5.2/tools/elfsigner/testsigs/tes...1 file pushed, 0 skipped. 0.4 MB/s (24784 bytes in 0.057s)
+adb -s 82c64f19 wait-for-device reboot
+adb -s 82c64f19 wait-for-device
+Done
+---- root/remount device ----
+adb -s 82c64f19 wait-for-device root
+adb -s 82c64f19 wait-for-device remount
+remount succeeded
+---- Push Android components ----
+adb -s 82c64f19  wait-for-device shell mkdir -p /vendor/bin
+adb -s 82c64f19  wait-for-device push C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator/android_Debug_aarch64/ship/calculator /vendor/bin
+C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator/a...1 file pushed, 0 skipped. 2.0 MB/s (46192 bytes in 0.022s)
+adb -s 82c64f19  wait-for-device shell chmod 777 /vendor/bin/calculator
+adb -s 82c64f19  wait-for-device push C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator/android_Debug_aarch64/ship/libcalculator.so /vendor/lib64/
+C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator/a...1 file pushed, 0 skipped. 1.9 MB/s (15216 bytes in 0.007s)
+ ---- Push Hexagon Components ----
+adb -s 82c64f19  wait-for-device shell mkdir -p /vendor/lib/rfsa/dsp/sdk/
+adb -s 82c64f19  wait-for-device push C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator/hexagon_Debug_dynamic_toolv83_v65/ship/libcalculator_skel.so /vendor/lib/rfsa/dsp/sdk/
+C:\Qualcomm\Hexagon_SDK\3.5.2/examples/common/calculator/h...1 file pushed, 0 skipped. 1.8 MB/s (15192 bytes in 0.008s)
+---- Direct dsp messages to logcat ---
+adb -s 82c64f19  wait-for-device shell "echo 0x1f > /vendor/lib/rfsa/dsp/sdk/calculator.farf"
+adb -s 82c64f19  wait-for-device
+
+
+5)
+
+---- Run Calculator Example Locally on Android ----
+adb -s 82c64f19  wait-for-device shell export LD_LIBRARY_PATH="/vendor/lib64/;" /vendor/bin/calculator 1 1000
+
+---- Run Calculator Example on CDSP ----
+adb -s 82c64f19  wait-for-device shell export LD_LIBRARY_PATH=/vendor/lib64/:$LD_LIBRARY_PATH ADSP_LIBRARY_PATH="/vendor/lib/rfsa/dsp/sdk\;/vendor/lib/rfsa/dsp/testsig;" /vendor/bin/calculator 0 1000

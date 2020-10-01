@@ -1,0 +1,143 @@
+--------- beginning of main
+03-03 22:24:00.009  1417  1417 D KeyguardUpdateMonitor: received broadcast android.intent.action.TIME_TICK
+03-03 22:24:00.009  1417  1417 D KeyguardUpdateMonitor: handleTimeUpdate
+--------- beginning of events
+03-03 22:24:00.078  1257  1275 I am_pss  : [1257,1000,system,112292864,88883200,0]
+03-03 22:24:00.098  1257  1275 I am_pss  : [1417,10031,com.android.systemui,128847872,111484928,0]
+03-03 22:24:00.111  1257  1275 I am_pss  : [3100,10040,com.cyanogenmod.filemanager,7239680,4448256,0]
+03-03 22:24:00.124  1257  1275 I am_pss  : [2515,10004,com.android.providers.calendar,6066176,3915776,0]
+03-03 22:24:00.136  1257  1275 I am_pss  : [3079,1000,com.android.keychain,4070400,2375680,0]
+03-03 22:24:00.149  1257  1275 I am_pss  : [2028,1000,com.qualcomm.qti.services.secureui:sui_service,4412416,2756608,0]
+03-03 22:24:00.161  1257  1275 I am_pss  : [2012,1000,com.quicinc.wipoweragent,3781632,2265088,0]
+03-03 22:24:00.165  1417  1417 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+03-03 22:24:00.165  1720  1720 D QtiCarrierConfigHelper: WARNING, no carrier configs on phone Id: 0
+03-03 22:24:00.168  1417  1417 D KeyguardUpdateMonitor: handleBatteryUpdate
+03-03 22:24:00.173  1257  1275 I am_pss  : [1994,1000,com.quicinc.wbcserviceapp,4046848,2396160,0]
+03-03 22:24:00.185  1257  1275 I am_pss  : [1979,1000,com.qualcomm.qti.carrierconfigure,4485120,2777088,0]
+03-03 22:24:00.197  1257  1275 I am_pss  : [1970,1001,com.qualcomm.qti.loadcarrier,3794944,2256896,0]
+03-03 22:24:00.210  1257  1275 I am_pss  : [1955,1027,com.android.nfc,11357184,7606272,0]
+03-03 22:24:00.225  1257  1275 I am_pss  : [1720,1001,com.android.phone,26615808,19865600,0]
+03-03 22:24:00.238  1257  1275 I am_pss  : [1706,1001,com.qualcomm.qti.telephonyservice,4786176,2748416,0]
+03-03 22:24:00.251  1257  1275 I am_pss  : [1692,1000,.dataservices,9816064,6565888,0]
+--------- beginning of kernel
+03-03 22:24:00.162     0     0 I chatty  : uid=0(root) logd identical 1 line
+03-03 22:24:00.434     0     0 W healthd : battery l=92 v=4344 t=26.0 h=2 st=2 c=-321 chg=u
+03-03 22:24:06.722     0     0 D logd    : logdr: UID=0 GID=0 PID=3140 b tail=0 logMask=7f pid=0 start=0ns timeout=0ns
+03-03 22:24:13.726     0     0 W healthd : battery l=92 v=4345 t=26.0 h=2 st=2 c=-322 chg=u
+03-03 22:24:13.730  1417  1417 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+03-03 22:24:13.732  1720  1720 D QtiCarrierConfigHelper: WARNING, no carrier configs on phone Id: 0
+03-03 22:24:13.735  1417  1417 D KeyguardUpdateMonitor: handleBatteryUpdate
+03-03 22:24:34.323     0     0 W healthd : battery l=92 v=4345 t=26.0 h=2 st=2 c=-321 chg=u
+03-03 22:24:34.326  1417  1417 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+03-03 22:24:34.327  1417  1417 D KeyguardUpdateMonitor: handleBatteryUpdate
+03-03 22:24:34.330  1720  1720 D QtiCarrierConfigHelper: WARNING, no carrier configs on phone Id: 0
+03-03 22:25:13.726  1257  1393 I battery_level: [93,4345,260]
+03-03 22:25:13.727  1257  1281 I WifiService: requestActivityInfo uid=1000
+03-03 22:25:13.727  1257  1281 I WifiService: reportActivityInfo uid=1000
+03-03 22:25:13.727  1257  1281 I WifiService: getSupportedFeatures uid=1000
+03-03 22:25:13.725     0     0 W healthd : battery l=93 v=4345 t=26.0 h=2 st=2 c=-321 chg=u
+03-03 22:25:13.729  1417  1417 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+--------- beginning of system
+03-03 22:25:13.732  1257  1281 E BatteryExternalStatsWorker: no controller energy info supplied for wifi
+03-03 22:25:13.732  1257  1281 E BatteryExternalStatsWorker: no controller energy info supplied for bluetooth
+03-03 22:25:13.734  1720  1720 D QtiCarrierConfigHelper: WARNING, no carrier configs on phone Id: 0
+03-03 22:25:13.735  1720  1720 E PhoneInterfaceManager: [PhoneIntfMgr] queryModemActivityInfo: Empty response
+03-03 22:25:13.736  1417  1417 D KeyguardUpdateMonitor: handleBatteryUpdate
+03-03 22:25:13.745  1257  1281 E KernelCpuSpeedReader: Failed to read cpu-freq: /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state (No such file or directory)
+03-03 22:25:13.755  1257  1281 E BatteryExternalStatsWorker: modem info is invalid: ModemActivityInfo{ mTimestamp=0 mSleepTimeMs=0 mIdleTimeMs=0 mTxTimeMs[]=[0, 0, 0, 0, 0] mRxTimeMs=0 mEnergyUsed=0}
+03-03 22:25:13.762  1257  1276 E KernelCpuSpeedReader: Failed to read cpu-freq: /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state (No such file or directory)
+03-03 22:25:32.790     0     0 I EXT4-fs (sda6): re-mounted. Opts: (null)
+03-03 22:25:32.791     0     0 I EXT4-fs (sde16): re-mounted. Opts: (null)
+03-03 22:25:41.286     0     0 I EXT4-fs (sda6): re-mounted. Opts: (null)
+03-03 22:25:41.287     0     0 I EXT4-fs (sde16): re-mounted. Opts: (null)
+03-03 22:25:42.281     0     0 D logd    : logdr: UID=0 GID=0 PID=3179 b tail=0 logMask=19 pid=0 start=0ns timeout=0ns
+03-03 22:25:42.668  1167  1167 E MSM-irqbalance: IRQ 76 not found in internal structure or should be ignored
+03-03 22:25:43.392  1257  1393 I battery_level: [94,4345,260]
+03-03 22:25:43.393  1257  1281 I WifiService: requestActivityInfo uid=1000
+03-03 22:25:43.393  1257  1281 I WifiService: reportActivityInfo uid=1000
+03-03 22:25:43.393  1257  1281 I WifiService: getSupportedFeatures uid=1000
+03-03 22:25:43.395  1417  1417 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+03-03 22:25:43.395  1720  1720 D QtiCarrierConfigHelper: WARNING, no carrier configs on phone Id: 0
+03-03 22:25:43.396  1257  1281 E BatteryExternalStatsWorker: no controller energy info supplied for wifi
+03-03 22:25:43.396  1257  1281 E BatteryExternalStatsWorker: no controller energy info supplied for bluetooth
+03-03 22:25:43.397  1720  1720 E PhoneInterfaceManager: [PhoneIntfMgr] queryModemActivityInfo: Empty response
+03-03 22:25:43.399  1417  1417 D KeyguardUpdateMonitor: handleBatteryUpdate
+03-03 22:25:43.392     0     0 W healthd : battery l=94 v=4345 t=26.0 h=2 st=2 c=-323 chg=u
+03-03 22:25:43.404  1257  1281 E KernelCpuSpeedReader: Failed to read cpu-freq: /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state (No such file or directory)
+03-03 22:25:43.411  1257  1281 E BatteryExternalStatsWorker: modem info is invalid: ModemActivityInfo{ mTimestamp=0 mSleepTimeMs=0 mIdleTimeMs=0 mTxTimeMs[]=[0, 0, 0, 0, 0] mRxTimeMs=0 mEnergyUsed=0}
+03-03 22:25:43.415  1257  1276 E KernelCpuSpeedReader: Failed to read cpu-freq: /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state (No such file or directory)
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:172::info: calling: NULL != (m = malloc(sizeof(*m)))
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:172::info: passed: NULL != (m = malloc(sizeof(*m)))
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:193::info: calling: !(rpc_flags & RPCMEM_HEAP_UNCACHED)
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:193::info: passed: !(rpc_flags & RPCMEM_HEAP_UNCACHED)
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:429:ION version is legacy
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:377::info: calling: 0 < rpcmem_ionfd
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:377::info: passed: 0 < rpcmem_ionfd
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:399:alloc data 0x0x741a2296a0, heap mask 0x2000000, flags 0x1
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:400::info: calling: ioctl(rpcmem_ionfd, ION_IOC_ALLOC_KK, &alloc) >= 0
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:400::info: passed: ioctl(rpcmem_ionfd, ION_IOC_ALLOC_KK, &alloc) >= 0
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:402:mmap data 0x0x741a2296a0
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:403::info: calling: 0 <= ioctl(rpcmem_ionfd, ION_IOC_MAP, &m->data)
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:403::info: passed: 0 <= ioctl(rpcmem_ionfd, ION_IOC_MAP, &m->data)
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:412::info: calling: MAP_FAILED != (m->paddr = (void *)mmap(NULL, alloc.len, PROT_READ|PROT_WRITE, MAP_SHARED, m->data.fd, 0))
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:412::info: passed: MAP_FAILED != (m->paddr = (void *)mmap(NULL, alloc.len, PROT_READ|PROT_WRITE, MAP_SHARED, m->data.fd, 0))
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:215:rpcmem register buf: heap mask: 0x2000000
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:256::info: calling: mfree
+03-03 22:25:44.310  3184  3184 D /vendor/bin/calculator: src/rpcmem_android.c:256::info: passed: mfree
+03-03 22:25:44.431  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:172::info: calling: NULL != (m = malloc(sizeof(*m)))
+03-03 22:25:44.431  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:172::info: passed: NULL != (m = malloc(sizeof(*m)))
+03-03 22:25:44.431  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:193::info: calling: !(rpc_flags & RPCMEM_HEAP_UNCACHED)
+03-03 22:25:44.431  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:193::info: passed: !(rpc_flags & RPCMEM_HEAP_UNCACHED)
+03-03 22:25:44.431  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:429:ION version is legacy
+03-03 22:25:44.431  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:377::info: calling: 0 < rpcmem_ionfd
+03-03 22:25:44.431  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:377::info: passed: 0 < rpcmem_ionfd
+03-03 22:25:44.431  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:399:alloc data 0x0x70d46296a0, heap mask 0x2000000, flags 0x1
+03-03 22:25:44.431  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:400::info: calling: ioctl(rpcmem_ionfd, ION_IOC_ALLOC_KK, &alloc) >= 0
+03-03 22:25:44.431  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:400::info: passed: ioctl(rpcmem_ionfd, ION_IOC_ALLOC_KK, &alloc) >= 0
+03-03 22:25:44.431  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:402:mmap data 0x0x70d46296a0
+03-03 22:25:44.432  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:403::info: calling: 0 <= ioctl(rpcmem_ionfd, ION_IOC_MAP, &m->data)
+03-03 22:25:44.432  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:403::info: passed: 0 <= ioctl(rpcmem_ionfd, ION_IOC_MAP, &m->data)
+03-03 22:25:44.432  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:412::info: calling: MAP_FAILED != (m->paddr = (void *)mmap(NULL, alloc.len, PROT_READ|PROT_WRITE, MAP_SHARED, m->data.fd, 0))
+03-03 22:25:44.432  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:412::info: passed: MAP_FAILED != (m->paddr = (void *)mmap(NULL, alloc.len, PROT_READ|PROT_WRITE, MAP_SHARED, m->data.fd, 0))
+03-03 22:25:44.432  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:215:rpcmem register buf: heap mask: 0x2000000
+03-03 22:25:44.433  3187  3187 V /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1266: /dsp/fastrpc_shell_3 load failed 45, searching...
+03-03 22:25:44.437  3187  3187 V /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1374: create user pd with attributes 0 domain 3
+03-03 22:25:44.441   980  1083 V /vendor/bin/cdsprpcd: vendor/qcom/proprietary/adsprpc/src/sysmon_cdsp_imp.c:45: Got L3 frequency request from CDSP for 576000KHz
+03-03 22:25:44.464   980  1083 V /vendor/bin/cdsprpcd: vendor/qcom/proprietary/adsprpc/src/sysmon_cdsp_imp.c:45: Got L3 frequency request from CDSP for 0KHz
+03-03 22:25:44.467   980  1083 V /vendor/bin/cdsprpcd: vendor/qcom/proprietary/adsprpc/src/sysmon_cdsp_imp.c:45: Got L3 frequency request from CDSP for 576000KHz
+03-03 22:25:44.468  3187  3189 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1463: Error 4b: get adsp msgd handle failed. domain 3
+03-03 22:25:44.471  3187  3188 E /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/apps_std_imp.c:695:Error 45: fopen failed for libadspmsgd_adsp_skel.so. (No such file or directory)
+03-03 22:25:44.474  3187  3189 E /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/log_config.c:174:Found calculator.farf. adspmsgd enabled 
+03-03 22:25:44.474  3187  3189 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:25:44.476  3187  3188 D adsprpc : HAP_utils.c:263:0x10e7:7: CDSP: Logging mask set to 31
+03-03 22:25:44.492  3187  3188 W adsprpc : calculator_imp.c:19:0x10ea:7: CDSP: ===============     DSP: sum result 499500 ===============
+03-03 22:25:44.492  3187  3187 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:25:44.492  3187  3188 W adsprpc : fastrpc_uprocess.c:1019:0x10ea:7: CDSP: current process exiting, FTQ enqueue errors are expected
+03-03 22:25:44.492  3187  3188 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 3, sc 4020200, pra 0x70d404b3f8
+03-03 22:25:44.492  3187  3188 E /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/listener_android.c:247:listener protocol failure 8000040d
+03-03 22:25:44.493  3187  3188 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 3, sc 4020200, pra 0x70d404b3f8
+03-03 22:25:44.493  3187  3188 E /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/listener_android.c:254::error: -2147482611: 0 == (nErr = __QAIC_HEADER(adsp_listener_next2)( ctx, nErr, 0, 0, &ctx, &handle, &sc, inBufs, inBufsLen, &inBufsLenReq))
+03-03 22:25:44.493  3187  3188 E /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/listener_android.c:336:Error 8000040d: listener thread exited
+03-03 22:25:44.493  3187  3188 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:25:44.493  3187  3188 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1540a1a0, sc 1000000, pra 0x0
+03-03 22:25:44.494  3187  3188 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:25:44.494  3187  3188 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1540a1a0, sc 1000000, pra 0x0
+03-03 22:25:44.494  3187  3188 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:25:44.494  3187  3188 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1540a1a0, sc 1000000, pra 0x0
+03-03 22:25:44.494  3187  3188 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:25:44.494  3187  3188 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1540a1a0, sc 1000000, pra 0x0
+03-03 22:25:44.495  3187  3189 E /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/log_config.c:319:Received exit.
+03-03 22:25:44.495  3187  3189 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:25:44.496  3187  3189 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1540a1a0, sc 1000000, pra 0x0
+03-03 22:25:44.496  3187  3189 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:25:44.496  3187  3189 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1540a1a0, sc 1000000, pra 0x0
+03-03 22:25:44.497  3187  3189 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:25:44.497  3187  3189 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1540a1a0, sc 1000000, pra 0x0
+03-03 22:25:44.497  3187  3189 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:25:44.497  3187  3189 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1540a1a0, sc 1000000, pra 0x0
+03-03 22:25:44.498  3187  3187 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1463: Error 4b: get adsp msgd handle failed. domain 3
+03-03 22:25:44.498  3187  3187 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 15406550, sc 2000000, pra 0x0
+03-03 22:25:44.500   980  1083 V /vendor/bin/cdsprpcd: vendor/qcom/proprietary/adsprpc/src/sysmon_cdsp_imp.c:45: Got L3 frequency request from CDSP for 0KHz
+03-03 22:25:44.504  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:256::info: calling: mfree
+03-03 22:25:44.504  3187  3187 D /vendor/bin/calculator: src/rpcmem_android.c:256::info: passed: mfree
+03-03 22:25:45.475  1692  2403 I DPMJ    : |SERVICE| DPM_D_REQ_GET_RUNNING_APP_LIST
