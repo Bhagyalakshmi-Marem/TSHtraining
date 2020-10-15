@@ -1,0 +1,64 @@
+
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:172::info: calling: NULL != (m = malloc(sizeof(*m)))
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:172::info: passed: NULL != (m = malloc(sizeof(*m)))
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:193::info: calling: !(rpc_flags & RPCMEM_HEAP_UNCACHED)
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:193::info: passed: !(rpc_flags & RPCMEM_HEAP_UNCACHED)
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:429:ION version is legacy
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:377::info: calling: 0 < rpcmem_ionfd
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:377::info: passed: 0 < rpcmem_ionfd
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:399:alloc data 0x0x76cfe296a0, heap mask 0x2000000, flags 0x1
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:400::info: calling: ioctl(rpcmem_ionfd, ION_IOC_ALLOC_KK, &alloc) >= 0
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:400::info: passed: ioctl(rpcmem_ionfd, ION_IOC_ALLOC_KK, &alloc) >= 0
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:402:mmap data 0x0x76cfe296a0
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:403::info: calling: 0 <= ioctl(rpcmem_ionfd, ION_IOC_MAP, &m->data)
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:403::info: passed: 0 <= ioctl(rpcmem_ionfd, ION_IOC_MAP, &m->data)
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:412::info: calling: MAP_FAILED != (m->paddr = (void *)mmap(NULL, alloc.len, PROT_READ|PROT_WRITE, MAP_SHARED, m->data.fd, 0))
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:412::info: passed: MAP_FAILED != (m->paddr = (void *)mmap(NULL, alloc.len, PROT_READ|PROT_WRITE, MAP_SHARED, m->data.fd, 0))
+03-03 22:21:46.474  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:215:rpcmem register buf: heap mask: 0x2000000
+03-03 22:21:46.485  3136  3136 V /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1266: /dsp/fastrpc_shell_3 load failed 45, searching...
+03-03 22:21:46.487  3136  3136 V /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1374: create user pd with attributes 0 domain 3
+03-03 22:21:46.491   964  1008 V /vendor/bin/cdsprpcd: vendor/qcom/proprietary/adsprpc/src/sysmon_cdsp_imp.c:45: Got L3 frequency request from CDSP for 576000KHz
+03-03 22:21:46.515   964  1008 V /vendor/bin/cdsprpcd: vendor/qcom/proprietary/adsprpc/src/sysmon_cdsp_imp.c:45: Got L3 frequency request from CDSP for 0KHz
+03-03 22:21:46.518   964  1008 V /vendor/bin/cdsprpcd: vendor/qcom/proprietary/adsprpc/src/sysmon_cdsp_imp.c:45: Got L3 frequency request from CDSP for 576000KHz
+03-03 22:21:46.519  3136  3138 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1463: Error 4b: get adsp msgd handle failed. domain 3
+03-03 22:21:46.521  3136  3137 E /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/apps_std_imp.c:695:Error 45: fopen failed for libadspmsgd_adsp_skel.so. (No such file or directory)
+03-03 22:21:46.523  3136  3138 E /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/log_config.c:174:Found calculator.farf. adspmsgd enabled 
+03-03 22:21:46.523  3136  3138 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:21:46.524  3136  3137 D adsprpc : HAP_utils.c:263:0x10e7:7: CDSP: Logging mask set to 31
+03-03 22:21:46.538  3136  3137 W adsprpc : stdout:1:0x10ea:7: CDSP: Bhagya: calculator_imp.c calculator_sum E 
+03-03 22:21:46.538  3136  3137 W adsprpc : calculator_imp.c:19:0x10ea:7: CDSP: =============== calculator_sum  DSP: sum result 499500 ===============
+03-03 22:21:46.538  3136  3137 W adsprpc : stdout:1:0x10ea:7: CDSP: Bhagya: calculator_imp.c calculator_sum X 
+03-03 22:21:46.539  3136  3137 W adsprpc : stdout:1:0x10ea:7: CDSP: Bhagya: calculator_imp.c calculator_sum2 E 
+03-03 22:21:46.539  3136  3137 W adsprpc : calculator_imp.c:32:0x10ea:7: CDSP: ===============  calculator_sum2   DSP: sum result 499500 ===============
+03-03 22:21:46.539  3136  3137 W adsprpc : stdout:1:0x10ea:7: CDSP: Bhagya: calculator_imp.c calculator_sum2 X 
+03-03 22:21:46.540  3136  3137 W adsprpc : stdout:1:0x10ea:7: CDSP: Bhagya: calculator_imp.c calculator_sum3 E 
+03-03 22:21:46.540  3136  3136 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:21:46.540  3136  3137 W adsprpc : calculator_imp.c:45:0x10ea:7: CDSP: ===============  calculator_sum3   DSP: sum result 499500 ===============
+03-03 22:21:46.541  3136  3137 W adsprpc : fastrpc_uprocess.c:1019:0x10ea:7: CDSP: current process exiting, FTQ enqueue errors are expected
+03-03 22:21:46.542  3136  3137 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 3, sc 4020200, pra 0x76cf92a3f8
+03-03 22:21:46.542  3136  3137 E /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/listener_android.c:247:listener protocol failure 8000040d
+03-03 22:21:46.542  3136  3137 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 3, sc 4020200, pra 0x76cf92a3f8
+03-03 22:21:46.543  3136  3137 E /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/listener_android.c:254::error: -2147482611: 0 == (nErr = __QAIC_HEADER(adsp_listener_next2)( ctx, nErr, 0, 0, &ctx, &handle, &sc, inBufs, inBufsLen, &inBufsLenReq))
+03-03 22:21:46.543  3136  3137 E /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/listener_android.c:336:Error 8000040d: listener thread exited
+03-03 22:21:46.543  3136  3137 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:21:46.543  3136  3137 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1550a1a0, sc 1000000, pra 0x0
+03-03 22:21:46.543  3136  3137 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:21:46.544  3136  3137 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1550a1a0, sc 1000000, pra 0x0
+03-03 22:21:46.544  3136  3137 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:21:46.544  3136  3137 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1550a1a0, sc 1000000, pra 0x0
+03-03 22:21:46.544  3136  3137 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:21:46.544  3136  3137 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1550a1a0, sc 1000000, pra 0x0
+03-03 22:21:46.545  3136  3138 E /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/log_config.c:319:Received exit.
+03-03 22:21:46.545  3136  3138 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:21:46.545  3136  3138 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1550a1a0, sc 1000000, pra 0x0
+03-03 22:21:46.546  3136  3138 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:21:46.546  3136  3138 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1550a1a0, sc 1000000, pra 0x0
+03-03 22:21:46.546  3136  3138 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:21:46.546  3136  3138 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1550a1a0, sc 1000000, pra 0x0
+03-03 22:21:46.546  3136  3138 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1445: Error 4b: adsp current process handle failed. domain 3
+03-03 22:21:46.546  3136  3138 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 1550a1a0, sc 1000000, pra 0x0
+03-03 22:21:46.547  3136  3136 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:1463: Error 4b: get adsp msgd handle failed. domain 3
+03-03 22:21:46.547  3136  3136 D /vendor/bin/calculator: vendor/qcom/proprietary/adsprpc/src/fastrpc_apps_user.c:841: Error 8000040d: remote handle invoke failed. domain 3, handle 15506550, sc 2000000, pra 0x0
+03-03 22:21:46.549   964  1008 V /vendor/bin/cdsprpcd: vendor/qcom/proprietary/adsprpc/src/sysmon_cdsp_imp.c:45: Got L3 frequency request from CDSP for 0KHz
+03-03 22:21:46.552  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:256::info: calling: mfree
+03-03 22:21:46.552  3136  3136 D /vendor/bin/calculator: src/rpcmem_android.c:256::info: passed: mfree
