@@ -1,0 +1,115 @@
+#include <stdio.h>
+#include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <getopt.h>
+#include <sys/ioctl.h>
+#include <sys/mman.h>
+#include <sys/select.h>
+#include <sys/time.h>
+
+#include <linux/videodev2.h>
+#include "videodev2-fsr172x.h"
+
+#ifndef V4L2_BUF_FLAG_ERROR
+#define V4L2_BUF_FLAG_ERROR	0x0040
+#endif
+
+#define ARRAY_SIZE(a)	(sizeof(a)/sizeof((a)[0]))
+
+struct device
+{
+	int fd;
+	enum v4l2_buf_type type;
+}dev;
+
+/* open the device taking arguments as devname,file descriptor,third argument as zero */
+static int video_open(struct device *dev,const char *devname, int no_query)
+{
+	struct v4l2_capability cap;
+	/**
+	  * struct v4l2_capability - Describes V4L2 device caps returned by VIDIOC_QUERYCAP
+	  *
+	  * @driver:	   name of the driver module (e.g. "bttv")
+	  * @card:	   name of the card (e.g. "Hauppauge WinTV")
+	  * @bus_info:	   name of the bus (e.g. "PCI:" + pci_name(pci_dev) )
+	  * @version:	   KERNEL_VERSION
+	  * @capabilities: capabilities of the physical device as a whole
+	  * @device_caps:  capabilities accessed via this particular device (node)
+	  * @reserved:	   reserved fields for future extensions
+	  */
+	int ret;
+
+	dev->fd=open(devname, O_RDWR);
+	//printf("Bhagya : video device opened\n");
+	if(dev->fd < 0)
+	{
+		printf("Error opening device %s: %d\n",devname,errno);
+		return dev->fd;
+	}
+
+	if (!no_query) {
+		printf("Bhagya : querying device  capabilities \n");
+		ret = ioctl(dev->fd, VIDIOC_QUERYCAP, &cap);
+		if (ret < 0) {
+			printf("Error opening device %s: unable to query "
+				"device.\n", devname);
+			close(dev->fd);
+			return ret;
+		}
+
+		if (cap.capabilities & V4L2_CAP_VIDEO_CAPTURE)
+		{
+			dev->type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+			printf("Bhagya: dev type is video capture and line no = %d\n",__LINE__);
+		}
+		else if (cap.capabilities & V4L2_CAP_VIDEO_OUTPUT)
+		{
+			dev->type = V4L2_BUF_TYPE_VIDEO_OUTPUT;
+			printf("Bhagya: dev type is video capture and line no = %d\n",__LINE__);
+		}
+		else {
+			printf("Error opening device %s: neither video capture "
+				"nor video output supported.\n", devname);
+			close(dev->fd);
+			return -EINVAL;
+		}
+
+		printf("Device %s opened: %s (%s).\n", devname, cap.card, cap.bus_info);
+	} else {
+		dev->type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+		printf("Device %s opened.\n", devname);
+	}
+
+	return 0;
+}
+
+/* closing the video device taking argument as file descriptor of the device*/
+static void video_close(struct device *dev)
+{
+	close(dev->fd);
+	printf("Bhagya : video device closed\n");
+}
+
+
+int main()
+{
+		
+	char *dev_name="/dev/video0";
+	/* open the video device */
+	printf("Bhagya : opening video device\n");
+	video_open(&dev,dev_name,0);
+		
+
+	/* close the video device */
+	printf("Bhagya : closing video device \n");
+	video_close(&dev);
+
+
+	return 0;
+
+}
+
