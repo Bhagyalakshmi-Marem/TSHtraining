@@ -1,0 +1,39 @@
+static int video_free_buffers(struct device *dev)
+{
+	printf("Bhagya: func_name = %s and line no = %d\n",__func__,__LINE__);
+	struct v4l2_requestbuffers rb;
+	unsigned int i;
+	int ret;
+
+	if (dev->nbufs == 0)
+		return 0;
+
+	if (dev->memtype == V4L2_MEMORY_MMAP) {
+		for (i = 0; i < dev->nbufs; ++i) {
+			ret = munmap(dev->buffers[i].mem, dev->buffers[i].size);
+			if (ret < 0) {
+				printf("Unable to unmap buffer %u (%d)\n", i, errno);
+				return ret;
+			}
+		}
+	}
+
+	memset(&rb, 0, sizeof rb);
+	rb.count = 0;
+	rb.type = dev->type;
+	rb.memory = dev->memtype;
+	printf("Bhagya: free buffers: VIDIOC_REQBUFS \n");
+	ret = ioctl(dev->fd, VIDIOC_REQBUFS, &rb);
+	if (ret < 0) {
+		printf("Unable to release buffers: %d.\n", errno);
+		return ret;
+	}
+
+	printf("%u buffers released.\n", dev->nbufs);
+
+	free(dev->buffers);
+	dev->nbufs = 0;
+	dev->buffers = NULL;
+
+	return 0;
+}

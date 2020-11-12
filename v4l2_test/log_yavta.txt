@@ -1,0 +1,498 @@
+bhagya@ubuntu:~/Documents/yavta$ ./yavta -F /dev/video0 --capture=10
+Bhagya: funtion_name : main line_no : 1078
+Bhagya : in case 'F'
+Bhagya : Open the video device 
+Bhagya: func_name = video_open and line no = 107
+Bhagya: dev type is video capture and line no = 135
+Device /dev/video0 opened: USB2.0 HD UVC WebCam (usb-0000:03:00.0-2).
+Bhagya :calling video_get_format 
+Bhagya: func_name = video_get_format and line no = 206
+Video format: MJPG (47504a4d) 1280x720
+Bhagya :Set the compression quality.,calling video_set_quality line_no 1311
+Bhagya: func_name = video_set_quality and line no = 746
+Bhagya :calling video_prepare_capture line_no 1317
+Bhagya: funtion_name : video_prepare_capture line_no : 823
+Bhagya : Allocate and map buffers.
+Bhagya: func_name = video_alloc_buffers and line no = 306
+Bhagya: allocate buffers: VIDIOC_REQBUFS 
+8 buffers requested.
+Bhagya: no.of buffers requested is 8 
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 0
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 0 mapped at address 0xb7423000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 1843200
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 1 mapped at address 0xb7261000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 3686400
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 2 mapped at address 0xb709f000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 5529600
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 3 mapped at address 0xb6edd000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 7372800
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 4 mapped at address 0xb6d1b000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 9216000
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 5 mapped at address 0xb6b59000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 11059200
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 6 mapped at address 0xb6997000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 12902400
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 7 mapped at address 0xb67d5000.
+Bhagya :Queue the buffers.
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : start streaming 
+Bhagya: func_name = video_enable and line no = 452
+Bhagya : Dequeue buffer 
+0 (0) [-] 0 95998 bytes 12626.970806 1605002179.973008
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+1 (1) [-] 2 97294 bytes 12627.083075 1605002180.040746
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+2 (2) [-] 3 100526 bytes 12627.151152 1605002180.105006
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya : Dequeue buffer 
+3 (3) [-] 4 107828 bytes 12627.214737 1605002180.173348
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+4 (4) [-] 5 94284 bytes 12627.351037 1605002180.304821
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+5 (5) [-] 6 100892 bytes 12627.482714 1605002180.440856
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+6 (6) [-] 7 105752 bytes 12627.619023 1605002180.573079
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+7 (7) [-] 8 109898 bytes 12627.751124 1605002180.705035
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+8 (0) [-] 9 115996 bytes 12627.882882 1605002180.840813
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+9 (1) [-] 10 114278 bytes 12628.018910 1605002180.973061
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: stop streaming 
+Bhagya: func_name = video_enable and line no = 452
+Captured 9 frames in 1.000389 seconds (8.996500 fps, 1042340.529534 B/s).
+Bhagya:free buffers
+Bhagya: func_name = video_free_buffers and line no = 384
+Bhagya: free buffers: VIDIOC_REQBUFS 
+8 buffers released.
+Bhagya: func_name = video_close and line no = 160
+bhagya@ubuntu:~/Documents/yavta$ 
+
+
+=====================================================================================
+
+bhagya@ubuntu:~/Documents/yavta$ ./yavta -F /dev/video0 --capture=20
+Bhagya: funtion_name : main line_no : 1078
+Bhagya : in case 'F'
+Bhagya : Open the video device 
+Bhagya: func_name = video_open and line no = 107
+Bhagya: dev type is video capture and line no = 135
+Device /dev/video0 opened: USB2.0 HD UVC WebCam (usb-0000:03:00.0-2).
+Bhagya :calling video_get_format 
+Bhagya: func_name = video_get_format and line no = 206
+Video format: MJPG (47504a4d) 1280x720
+Bhagya :Set the compression quality.,calling video_set_quality line_no 1311
+Bhagya: func_name = video_set_quality and line no = 746
+Bhagya :calling video_prepare_capture line_no 1317
+Bhagya: funtion_name : video_prepare_capture line_no : 823
+Bhagya : Allocate and map buffers.
+Bhagya: func_name = video_alloc_buffers and line no = 306
+Bhagya: allocate buffers: VIDIOC_REQBUFS 
+8 buffers requested.
+Bhagya: no.of buffers requested is 8 
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 0
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 0 mapped at address 0xb7447000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 1843200
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 1 mapped at address 0xb7285000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 3686400
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 2 mapped at address 0xb70c3000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 5529600
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 3 mapped at address 0xb6f01000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 7372800
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 4 mapped at address 0xb6d3f000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 9216000
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 5 mapped at address 0xb6b7d000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 11059200
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 6 mapped at address 0xb69bb000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 12902400
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 7 mapped at address 0xb67f9000.
+Bhagya :Queue the buffers.
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : start streaming 
+Bhagya: func_name = video_enable and line no = 452
+Bhagya : Dequeue buffer 
+0 (0) [-] 0 144300 bytes 13591.657255 1605003144.727324
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+1 (1) [-] 2 140134 bytes 13591.905541 1605003144.859010
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+2 (2) [-] 3 128022 bytes 13592.037364 1605003144.991476
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+3 (3) [-] 4 125962 bytes 13592.169183 1605003145.127474
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+4 (4) [-] 5 135854 bytes 13592.305516 1605003145.259414
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+5 (5) [-] 6 117776 bytes 13592.437249 1605003145.391614
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+6 (6) [-] 7 120720 bytes 13592.569296 1605003145.527607
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+7 (7) [-] 8 126174 bytes 13592.705475 1605003145.659417
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+8 (0) [-] 9 108552 bytes 13592.837217 1605003145.791152
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+9 (1) [-] 10 114570 bytes 13592.969357 1605003145.927503
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+10 (2) [-] 11 121976 bytes 13593.105722 1605003146.059302
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+11 (3) [-] 12 123140 bytes 13593.237644 1605003146.191807
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+12 (4) [-] 13 111962 bytes 13593.369161 1605003146.327320
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya : Dequeue buffer 
+13 (5) [-] 14 110542 bytes 13593.505550 1605003146.459335
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+14 (6) [-] 15 112242 bytes 13593.637302 1605003146.591141
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+15 (7) [-] 16 109422 bytes 13593.769326 1605003146.727335
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+16 (0) [-] 17 105266 bytes 13593.905275 1605003146.859369
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+17 (1) [-] 18 94742 bytes 13594.037248 1605003146.991297
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+18 (2) [-] 19 89954 bytes 13594.169265 1605003147.127395
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+19 (3) [-] 20 87922 bytes 13594.306042 1605003147.259211
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: stop streaming 
+Bhagya: func_name = video_enable and line no = 452
+Captured 19 frames in 2.532229 seconds (7.503271 fps, 919834.659504 B/s).
+Bhagya:free buffers
+Bhagya: func_name = video_free_buffers and line no = 384
+Bhagya: free buffers: VIDIOC_REQBUFS 
+8 buffers released.
+Bhagya: func_name = video_close and line no = 160
+
+
+=======================================================================================
+bhagya@ubuntu:~/Documents/yavta$ ./yavta -F /dev/video0 --capture=10 -l
+Bhagya: funtion_name : main line_no : 1078
+Bhagya : in case 'F'
+Bhagya : Open the video device 
+Bhagya: func_name = video_open and line no = 107
+Bhagya: dev type is video capture and line no = 135
+Device /dev/video0 opened: USB2.0 HD UVC WebCam (usb-0000:03:00.0-2).
+Bhagya :calling video_list_controls 
+Bhagya: func_name = video_list_controls and line no = 486
+control 0x00980900 Brightness min 0 max 100 step 1 default 50 current 50.
+control 0x00980901 Contrast min 0 max 100 step 1 default 50 current 50.
+control 0x00980902 Saturation min 0 max 100 step 1 default 50 current 50.
+control 0x00980903 Hue min 0 max 100 step 1 default 50 current 50.
+control 0x0098090c White Balance Temperature, Auto min 0 max 1 step 1 default 1 current 1.
+control 0x00980910 Gamma min 0 max 100 step 1 default 50 current 50.
+control 0x00980918 Power Line Frequency min 0 max 2 step 1 default 2 current 2.
+Bhagya: func_name = video_query_menu and line no = 468
+  0: Disabled
+  1: 50 Hz
+  2: 60 Hz
+control 0x0098091a White Balance Temperature min 2500 max 6500 step 10 default 4500 current 4500.
+control 0x0098091b Sharpness min 0 max 100 step 1 default 50 current 50.
+control 0x009a0901 Exposure, Auto min 0 max 3 step 1 default 3 current 3.
+Bhagya: func_name = video_query_menu and line no = 468
+control 0x009a0902 Exposure (Absolute) min 50 max 10000 step 1 default 166 current 166.
+control 0x009a0903 Exposure, Auto Priority min 0 max 1 step 1 default 0 current 1.
+12 controls found.
+Bhagya :calling video_get_format 
+Bhagya: func_name = video_get_format and line no = 206
+Video format: MJPG (47504a4d) 1280x720
+Bhagya :Set the compression quality.,calling video_set_quality line_no 1312
+Bhagya: func_name = video_set_quality and line no = 746
+Bhagya :calling video_prepare_capture line_no 1318
+Bhagya: funtion_name : video_prepare_capture line_no : 823
+Bhagya : Allocate and map buffers.
+Bhagya: func_name = video_alloc_buffers and line no = 306
+Bhagya: allocate buffers: VIDIOC_REQBUFS 
+8 buffers requested.
+Bhagya: no.of buffers requested is 8 
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 0
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 0 mapped at address 0xb73a9000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 1843200
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 1 mapped at address 0xb71e7000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 3686400
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 2 mapped at address 0xb7025000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 5529600
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 3 mapped at address 0xb6e63000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 7372800
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 4 mapped at address 0xb6ca1000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 9216000
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 5 mapped at address 0xb6adf000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 11059200
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 6 mapped at address 0xb691d000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 1843200 offset: 12902400
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 7 mapped at address 0xb675b000.
+Bhagya :Queue the buffers.
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : start streaming 
+Bhagya: func_name = video_enable and line no = 452
+Bhagya : Dequeue buffer 
+0 (0) [-] 0 53368 bytes 252.613556 1605075753.121780
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+1 (1) [-] 2 53594 bytes 252.673372 1605075753.158059
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+2 (2) [-] 3 54126 bytes 252.710304 1605075753.189469
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya : Dequeue buffer 
+3 (3) [-] 4 54074 bytes 252.742248 1605075753.221494
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+4 (4) [-] 5 53986 bytes 252.773593 1605075753.257953
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+5 (5) [-] 6 54266 bytes 252.809279 1605075753.289730
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+6 (6) [-] 7 54510 bytes 252.842018 1605075753.321120
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+7 (7) [-] 8 55864 bytes 252.873320 1605075753.358295
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+8 (0) [-] 9 58054 bytes 252.909193 1605075753.389805
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : Dequeue buffer 
+9 (1) [-] 10 73300 bytes 252.941729 1605075753.422086
+Bhagya : save the image
+Bhagya : requeue buffer
+Bhagya: func_name = video_queue_buffer and line no = 424
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: stop streaming 
+Bhagya: func_name = video_enable and line no = 452
+Captured 9 frames in 0.300701 seconds (29.930063 fps, 1879415.100050 B/s).
+Bhagya:free buffers
+Bhagya: func_name = video_free_buffers and line no = 384
+Bhagya: free buffers: VIDIOC_REQBUFS 
+8 buffers released.
+Bhagya: func_name = video_close and line no = 160
+bhagya@ubuntu:~/Documents/yavta$ 
+

@@ -1,3 +1,9 @@
+/* 1.open the video device
+   2.querying the video device capabilities
+   3.set the format
+   4.set the framerate
+   5.close the video device */
+
 #include <stdio.h>
 #include <string.h>
 #include <fcntl.h>
@@ -24,6 +30,10 @@ struct device
 {
 	int fd;
 	enum v4l2_buf_type type;
+	unsigned int width;
+	unsigned int height;
+	unsigned int bytesperline;
+	unsigned int imagesize;
 }dev;
 
 /* open the device taking arguments as devname,file descriptor,third argument as zero */
@@ -69,7 +79,7 @@ static int video_open(struct device *dev,const char *devname, int no_query)
 		else if (cap.capabilities & V4L2_CAP_VIDEO_OUTPUT)
 		{
 			dev->type = V4L2_BUF_TYPE_VIDEO_OUTPUT;
-			printf("Bhagya: dev type is video capture and line no = %d\n",__LINE__);
+			printf("Bhagya: dev type is video output and line no = %d\n",__LINE__);
 		}
 		else {
 			printf("Error opening device %s: neither video capture "

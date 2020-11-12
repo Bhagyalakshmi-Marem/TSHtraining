@@ -1,0 +1,14 @@
+Bhagya : opening video device
+Bhagya : querying device  capabilities 
+Bhagya: dev type is video capture and line no = 77
+Device /dev/video0 opened: USB2.0 HD UVC WebCam (usb-0000:03:00.0-2).
+Bhagya: setting video format 
+Video format set: width: 640 height: 480 buffer size: 614400
+Bhagya:setting video format
+Bhagya: func_name = video_set_framerate and line no = 128
+Current frame rate: 1/30
+Setting frame rate to: 1/30
+Frame rate set: 1/30
+Bhagya : closing video device 
+Bhagya : video device closed
+

@@ -1,0 +1,58 @@
+Bhagya : opening video device
+Bhagya : querying device  capabilities 
+Bhagya: dev type is video capture and line no = 101
+Device /dev/video0 opened: USB2.0 HD UVC WebCam (usb-0000:03:00.0-2).
+Bhagya:setting video format
+Bhagya: setting video format 
+Video format set: width: 640 height: 480 buffer size: 614400
+Bhagya: func_name = video_set_framerate and line no = 152
+Current frame rate: 1/30
+Setting frame rate to: 1/30
+Frame rate set: 1/30
+Bhagya :calling video_prepare_capture 
+Bhagya: funtion_name : video_prepare_capture line_no : 353
+Bhagya : Allocate and map buffers.
+Bhagya: func_name = video_alloc_buffers and line no = 196
+Bhagya: allocate buffers: VIDIOC_REQBUFS 
+6 buffers requested.
+Bhagya: no.of buffers requested is 6 
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 614400 offset: 0
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 0 mapped at address 0xb74de000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 614400 offset: 614400
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 1 mapped at address 0xb7448000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 614400 offset: 1228800
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 2 mapped at address 0xb73b2000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 614400 offset: 1843200
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 3 mapped at address 0xb731c000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 614400 offset: 2457600
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 4 mapped at address 0xb7286000.
+Bhagya: map buffers: VIDIOC_QUERYBUF 
+length: 614400 offset: 3072000
+Bhagya: memory type is V4L2_MEMORY_MMAP 
+Buffer 5 mapped at address 0xb71f0000.
+Bhagya :Queue the buffers.
+Bhagya: func_name = video_queue_buffer and line no = 274
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 274
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 274
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 274
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 274
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya: func_name = video_queue_buffer and line no = 274
+Bhagya: queue buffers: VIDIOC_QBUF 
+Bhagya : closing video device 
+Bhagya : video device closed
+

@@ -1,3 +1,8 @@
+
+/* 1.open the video device
+   2.close the video device */
+
+
 #include <stdio.h>
 #include <string.h>
 #include <fcntl.h>

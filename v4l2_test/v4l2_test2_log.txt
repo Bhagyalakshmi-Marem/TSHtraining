@@ -1,0 +1,6 @@
+Bhagya : opening video device
+Bhagya : querying device  capabilities 
+Bhagya: dev type is video capture and line no = 73
+Device /dev/video0 opened: USB2.0 HD UVC WebCam (usb-0000:03:00.0-2).
+Bhagya : closing video device 
+Bhagya : video device closed

@@ -1,0 +1,4 @@
+Bhagya : opening video device
+Bhagya : video device opened
+Bhagya : closing video device 
+Bhagya : video device closed
